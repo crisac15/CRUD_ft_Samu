@@ -12,7 +12,7 @@ class Inventario {
         }
     }
 
-    // Método para aumentar la cantidad de un producto existente por su ID
+    // Método para aumentar la cantidad de un producto existente por su ID  sdas
     fun aumentarCantidadProducto(id: Int, cantidad: Int) {
         val producto = productos.find { it.id == id }
         if (producto != null) {
