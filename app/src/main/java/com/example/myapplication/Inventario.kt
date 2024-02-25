@@ -26,7 +26,19 @@ class Inventario {
     fun consultarProductoPorId(id: Int): Producto? {
         return productos.find { it.id == id }
     }
+    fun consultarProductosPorPrecio(pPrecio: Double): List<Producto> {
+        return productos.filter { it.precioVenta == pPrecio}
+    }
 
+    // Método para consultar productos por cantidad
+    fun consultarProductosPorCantidad(pCantidad: Int, maxCantidad: Int): List<Producto> {
+        return productos.filter { it.cantidad == pCantidad}
+    }
+
+    // Método para consultar productos por cantidad de vendidos
+    fun consultarProductosPorCantidadVendidos(pCantidadVendidos: Int): List<Producto> {
+        return productos.filter { it.cantidadVendidos == pCantidadVendidos }
+    }
     // Método para modificar la información de un producto
     fun modificarProducto(id: Int, nuevoPrecioCosto: Double, nuevoPrecioVenta: Double, nuevaCantidad: Int) {
         val producto = productos.find { it.id == id }

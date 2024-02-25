@@ -1,6 +1,6 @@
 package com.example.myapplication
 
-data class Producto(
+class Producto(
     val id: Int,
     val nombre: String,
     var cantidad: Int,

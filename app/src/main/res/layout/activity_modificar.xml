@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".modificar">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="228dp"
-        android:layout_height="227dp"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="97dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <Button
         android:id="@+id/EJEMPLO"
         android:layout_width="wrap_content"
