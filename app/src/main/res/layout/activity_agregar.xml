@@ -19,10 +19,11 @@
         app:layout_constraintVertical_bias="0.603" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/idAdd"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="#FFFFFF"
-        android:hint="hint"
+        android:hint=" id"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.559"
@@ -31,10 +32,11 @@
         app:layout_constraintVertical_bias="0.13" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/nameAdd"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="#FFFFFF"
-        android:hint="hint"
+        android:hint="nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.559"
@@ -43,10 +45,11 @@
         app:layout_constraintVertical_bias="0.208" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/mountAdd"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="#FFFFFF"
-        android:hint="hint"
+        android:hint="cantidad"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.559"
@@ -55,10 +58,11 @@
         app:layout_constraintVertical_bias="0.28" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/saleAdd"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="#FFFFFF"
-        android:hint="hint"
+        android:hint="precio venta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.559"
@@ -67,10 +71,11 @@
         app:layout_constraintVertical_bias="0.34" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/costAdd"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="#FFFFFF"
-        android:hint="hint"
+        android:hint="precio costo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.559"
@@ -79,10 +84,11 @@
         app:layout_constraintVertical_bias="0.4" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/soldAdd"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:background="#FFFFFF"
-        android:hint="hint"
+        android:hint="cantidad vendida"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.559"
@@ -163,14 +169,14 @@
         app:layout_constraintVertical_bias="0.47" />
 
     <TextView
-        android:id="@+id/textResultado"
-        android:layout_width="126dp"
-        android:layout_height="23dp"
+        android:id="@+id/textAddRes"
+        android:layout_width="402dp"
+        android:layout_height="150dp"
         android:text="Res: "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689" />
+        app:layout_constraintVertical_bias="0.91" />
 </androidx.constraintlayout.widget.ConstraintLayout>
