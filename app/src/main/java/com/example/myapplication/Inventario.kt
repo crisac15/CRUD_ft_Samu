@@ -39,7 +39,7 @@ class Inventario {
     fun consultarProductosPorCantidadVendidos(pCantidadVendidos: Int): List<Producto> {
         return productos.filter { it.cantidadVendidos == pCantidadVendidos }
     }
-    // Método para modificar la información de un producto
+    // Método para modificar la información de un producto sdfsadfsdfsdf
     fun modificarProducto(id: Int, nuevoPrecioCosto: Double, nuevoPrecioVenta: Double, nuevaCantidad: Int) {
         val producto = productos.find { it.id == id }
         if (producto != null) {
