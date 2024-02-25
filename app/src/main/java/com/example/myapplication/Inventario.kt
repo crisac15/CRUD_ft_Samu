@@ -1,8 +1,13 @@
 package com.example.myapplication
 
-class Inventario {
+object Inventario {
     private val productos = mutableListOf<Producto>()
 
+
+    // Método para obtener la lista de productos
+    fun obtenerListaProductos(): List<Producto> {
+        return productos.toList() // Devuelve una copia de la lista para evitar modificaciones externas
+    }
     // Método para agregar un nuevo producto
     fun agregarProducto(producto: Producto) {
         if (productos.any { it.id == producto.id }) {
@@ -26,7 +31,7 @@ class Inventario {
     fun consultarProductoPorId(id: Int): Producto? {
         return productos.find { it.id == id }
     }
-    fun consultarProductosPorPrecio(pPrecio: Double): List<Producto> {
+    fun consultarProductosPorPrecio(pPrecio: Int): List<Producto> {
         return productos.filter { it.precioVenta == pPrecio}
     }
 
@@ -40,7 +45,7 @@ class Inventario {
         return productos.filter { it.cantidadVendidos == pCantidadVendidos }
     }
     // Método para modificar la información de un producto sdfsadfsdfsdf
-    fun modificarProducto(id: Int, nuevoPrecioCosto: Double, nuevoPrecioVenta: Double, nuevaCantidad: Int) {
+    fun modificarProducto(id: Int, nuevoPrecioCosto: Int, nuevoPrecioVenta: Int, nuevaCantidad: Int) {
         val producto = productos.find { it.id == id }
         if (producto != null) {
             producto.precioCosto = nuevoPrecioCosto

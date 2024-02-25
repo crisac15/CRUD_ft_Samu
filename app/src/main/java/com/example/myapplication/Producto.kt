@@ -4,7 +4,7 @@ class Producto(
     val id: Int,
     val nombre: String,
     var cantidad: Int,
-    var precioCosto: Double,
-    var precioVenta: Double,
+    var precioCosto: Int,
+    var precioVenta: Int,
     var cantidadVendidos: Int
 )
