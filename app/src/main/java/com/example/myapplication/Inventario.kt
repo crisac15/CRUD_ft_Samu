@@ -41,9 +41,7 @@ object Inventario {
     }
 
     // Método para consultar productos por cantidad de vendidos
-    fun consultarProductosPorCantidadVendidos(pCantidadVendidos: Int): List<Producto> {
-        return productos.filter { it.cantidadVendidos == pCantidadVendidos }
-    }
+
     // Método para modificar la información de un producto sdfsadfsdfsdf
     fun modificarProducto(id: Int, nuevoPrecioCosto: Int, nuevoPrecioVenta: Int, nuevaCantidad: Int) {
         val producto = productos.find { it.id == id }
@@ -57,5 +55,31 @@ object Inventario {
     // Método para eliminar un producto por su ID
     fun eliminarProducto(id: Int) {
         productos.removeAll { it.id == id }
+    }
+
+    // Método para consultar productos por cantidad
+    fun consultarProductosPorCantidad(pCantidad: Int): List<Producto> {
+
+        val productosCoincidentes = mutableListOf<Producto>()
+
+        for (pr in productos) {
+            if (pr.cantidad == pCantidad) {
+                productosCoincidentes.add(pr)
+            }
+        }
+        return productosCoincidentes
+    }
+
+    // Método para consultar productos por cantidad de vendidos
+    fun consultarProductosPorCantidadVendidos(pCantidadVendidos: Int): List<Producto> {
+
+        val productosCoincidentes = mutableListOf<Producto>()
+
+        for (pr in productos) {
+            if (pr.cantidadVendidos == pCantidadVendidos) {
+                productosCoincidentes.add(pr)
+            }
+        }
+        return productosCoincidentes
     }
 }

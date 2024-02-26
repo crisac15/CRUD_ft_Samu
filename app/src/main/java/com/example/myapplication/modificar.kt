@@ -17,6 +17,9 @@ class modificar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modificar)
+
+
+
         infoProductoTextView = findViewById(R.id.textAntes)
         productoDespues = findViewById(R.id.textDespues)
         llamarModificar = findViewById(R.id.modifButton)
@@ -27,8 +30,7 @@ class modificar : AppCompatActivity() {
 
         llamarModificar.setOnClickListener {
 
-            Inventario.agregarProducto(Producto(1, "Martillo", 10, 5, 10, 0))
-            val productoSeleccionado = Inventario.consultarProductoPorId(idIngresado.text.toString().toInt()) // Implementa este método para obtener el producto seleccionado
+            val productoSeleccionado = Inventario.consultarProductoPorId(idIngresado.text.toString().toInt())
 
             if (productoSeleccionado != null) {
                 val infoProductoAntes = "ID: ${productoSeleccionado.id}\n" +
