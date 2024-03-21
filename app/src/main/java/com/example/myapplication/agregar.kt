@@ -13,6 +13,7 @@ class agregar : AppCompatActivity() {
     lateinit var llamarAgregar: Button
     lateinit var addId : TextInputEditText
     lateinit var addNombre : TextInputEditText
+    lateinit var addIdFerreteria : TextInputEditText
     lateinit var addCantidad : TextInputEditText
     lateinit var addVenta : TextInputEditText
     lateinit var addCosto : TextInputEditText
@@ -28,6 +29,7 @@ class agregar : AppCompatActivity() {
         addResul = findViewById(R.id.textAddRes)
         addId = findViewById(R.id.idAdd)
         addNombre = findViewById(R.id.nameAdd)
+        addIdFerreteria = findViewById(R.id.ferreAdd)
         addCantidad = findViewById(R.id.mountAdd)
         addVenta = findViewById(R.id.saleAdd)
         addCosto = findViewById(R.id.costAdd)
@@ -38,11 +40,12 @@ class agregar : AppCompatActivity() {
         llamarAgregar.setOnClickListener {
             if (Inventario.consultarProductoPorId(addId.text.toString().toInt()) == null) {
 
-                Inventario.agregarProducto(Producto(addId.text.toString().toInt(), addNombre.text.toString(), addCantidad.text.toString().toInt(), addCosto.text.toString().toInt(), addVenta.text.toString().toInt(), addTotalVendidos.text.toString().toInt()))
+                Inventario.agregarProducto(Producto(addId.text.toString().toInt() ,addNombre.text.toString() ,addCantidad.text.toString().toInt(),addIdFerreteria.text.toString().toInt() ,addCosto.text.toString().toInt(), addVenta.text.toString().toInt(), addTotalVendidos.text.toString().toInt()))
 
                 val productoAgregar = Inventario.consultarProductoPorId(addId.text.toString().toInt())
                 if (productoAgregar != null) {
                     val infoProductoAgregado = "ID: ${productoAgregar.id}\n" +
+                            "Num.Ferretería: ${productoAgregar.idFerreteria}\n" +
                             "Nombre: ${productoAgregar.nombre}\n" +
                             "Cantidad: ${productoAgregar.cantidad}\n" +
                             "Precio Costo: ${productoAgregar.precioCosto}\n" +
