@@ -16,6 +16,7 @@ class Consultas : AppCompatActivity() {
     lateinit var rb1: RadioButton
     lateinit var rb2: RadioButton
     lateinit var rb3: RadioButton
+    lateinit var rb4: RadioButton
     lateinit var infoProductos: TextView
     lateinit var valorCons: TextView
 
@@ -29,6 +30,7 @@ class Consultas : AppCompatActivity() {
         rb1 = findViewById(R.id.rbConsultas1)
         rb2 = findViewById(R.id.rbConsultas2)
         rb3 = findViewById(R.id.rbConsultas3)
+        rb4 = findViewById(R.id.rbConsultas4)
         infoProductos = findViewById(R.id.displayProductos)
         valorCons = findViewById(R.id.valorConsulta)
         infoProductos.setMovementMethod(ScrollingMovementMethod())
@@ -49,8 +51,10 @@ class Consultas : AppCompatActivity() {
                     listaProductos = Inventario.consultarProductosPorPrecio(valor).toMutableList()
                 } else if (rb2.isChecked) {
                     listaProductos = Inventario.consultarProductosPorCantidad(valor).toMutableList()
-                } else {
+                }else if (rb3.isChecked) {
                     listaProductos = Inventario.consultarProductosPorCantidadVendidos(valor).toMutableList()
+                } else {
+                    listaProductos = Inventario.consultarProductoPorFerreteria(valor).toMutableList()
                 }
 
                 var info = ""

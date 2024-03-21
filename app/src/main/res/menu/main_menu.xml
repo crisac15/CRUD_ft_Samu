@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/optBuscar"
+        android:title="@string/optBuscar" />
+    <!-- android:icon="@drawable/ic_settings" /> -->
+    <item
+        android:id="@+id/optBuscarProducto"
+        android:title="@string/optBuscarProducto" />
+ <!-- Agrega más elementos de menú según tus necesidades -->
+</menu>

@@ -61,8 +61,8 @@
 
     <RadioGroup
         android:id="@+id/rgConsultas"
-        android:layout_width="216dp"
-        android:layout_height="144dp"
+        android:layout_width="214dp"
+        android:layout_height="179dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,9 +85,15 @@
 
         <RadioButton
             android:id="@+id/rbConsultas3"
+            android:layout_width="217dp"
+            android:layout_height="38dp"
+            android:text="Unidades vendidas" />
+
+        <RadioButton
+            android:id="@+id/rbConsultas4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Unidades vendidas" />
+            android:text="Por ferretería" />
 
     </RadioGroup>
 
